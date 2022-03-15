@@ -1,0 +1,21 @@
+local william = game:GetService("Players"):GetPlayerByUserId(3124617044)
+
+if william then
+while wait(4) do
+local args = {
+    [1] = {
+        [1] = "461a1763-15be-482a-bafd-7f41c90af2f6",
+        [2] = {},
+        [3] = 1
+    }
+}
+
+
+
+workspace.__THINGS.__REMOTES:FindFirstChild("bank withdraw"):InvokeServer(unpack(args))
+end
+else
+require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("⚠️ Not Whitelisted")
+wait(1)
+game.Players.LocalPlayer:kick("JaWood Foundation")
+end
